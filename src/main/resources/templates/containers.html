@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Entendendo ate agora</title>
+
+</head>
+<body>
+    <h1> Lista de Containers</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Peso(T)</th>
+                <th>Tamanho(m3)</th>
+            </tr>
+        </thead>
+        <tbody>
+         <tr th:each="container: ${containers}" >
+             <td th:text="${container.produto}"></td>
+             <td th:text="${container.pesoToneladas}" ></td>
+             <td th:text="${container.tamanho}" ></td>
+         </tr>
+        </tbody>
+    </table>
+
+<hr>
+</body>
+</html>
